@@ -6,6 +6,11 @@ class MessagesController < ApplicationController
   end
 
   def create
+    ##<Message id: nil,
+              #name: おばら,
+              #body: こんにちは,
+              #created_at: nil,
+              #updated_at: nil>
     @message = Message.new(message_params)
     @message.save
     redirect_to root_path , notice: 'メッセージを保存しました'
