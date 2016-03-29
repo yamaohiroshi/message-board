@@ -10,13 +10,13 @@
 <body>
   <nav class="navbar">
     <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">Message Board</a>
+    <% if notice %>
+      <div class="alert alert-info">
+        <%= notice %>
       </div>
-    </div>
-  </nav>
-  <div class="container">
-<%= yield %>
+    <% end %>
+    
+    <%= yield %>
   </div>
 </body>
 </html>
