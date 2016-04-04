@@ -23,7 +23,7 @@ class MessagesController < ApplicationController
     @message.destroy
     redirect_to root_path, notice: 'メッセージを削除しました'
   end
-
+　
   def create
     @message = Message.new(message_params)
     if @message.save
